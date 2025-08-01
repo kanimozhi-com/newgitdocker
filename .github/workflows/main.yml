@@ -23,7 +23,7 @@ jobs:
         run: sudo docker build -t ${{ secrets.DOCKER_USERNAME }}/sample-app:latest .
 
       - name: Run Docker Container
-        run: sudo docker run -d --name mycontainer -p 80:80 ${{ secrets.DOCKER_USERNAME }}/sample-app:latest
+        run: sudo docker run -d --name mycontainer -p 8080:80 ${{ secrets.DOCKER_USERNAME }}/sample-app:latest
 
       - name: Push to Docker Hub
         run: sudo docker push ${{ secrets.DOCKER_USERNAME }}/sample-app:latest

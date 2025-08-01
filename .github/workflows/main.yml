@@ -2,7 +2,7 @@ name: Build, Run, and Push Docker Image
 
 on:
   push:
-    branches:
+    branches: 
       - main
  
 jobs:
